@@ -39,6 +39,12 @@ body {
     rgba(0,0,0,0.18) 100%);
 }
   
+      .shade{
+      position:fixed; inset:0;
+      background:radial-gradient(circle at top left, rgba(255,255,255,.05), transparent 55%),
+      linear-gradient(180deg, rgba(10,12,18,.45), rgba(10,12,18,.8));
+      pointer-events:none;
+    }
 
   @media (prefers-color-scheme: dark) {
     body {
@@ -127,23 +133,6 @@ body {
   pointer-events: none;
   border-radius: 30px;
   opacity: 0;
-  animation: shimmer 6s ease-in-out infinite;
-  animation-delay: 2s;
-}
-
-@keyframes shimmer {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%) rotate(25deg);
-  }
-  50% {
-    opacity: 0.6;
-    transform: translateX(100%) rotate(25deg);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(200%) rotate(25deg);
-  }
 }
 
   .btn {
@@ -1071,4 +1060,3 @@ body {
     border-radius: 18px;
   }
 }
-
